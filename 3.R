@@ -1,0 +1,6 @@
+by_experiment <-  group_by(shrubs, experiment)
+avg_height <- summarize(by_experiment, avg_height = mean(height))
+print(avg_height)
+by_site <- group_by(shrubs, site)
+max_height <-  summarize(by_site, max_height = max(height))
+print(max_height)
